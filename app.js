@@ -25,29 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//init firebase connection
-// const serviceAccount = require('./smart-garden-2020-firebase-adminsdk-7570k-b63df92db5.json');
-// firebase.initializeApp({
-//   credential: firebase.credential.cert(serviceAccount),
-//   databaseURL: 'https://smart-garden-2020-default-rtdb.firebaseio.com/'
-// });
-
-//Get database from firebase
-// const db = firebase.database();
-// var ref = db.ref("server/saving-data/fireblog");
-
-// var usersRef = ref.child("users");
-// usersRef.set({
-//   alanisawesome: {
-//     date_of_birth: "June 23, 1912",
-//     full_name: "Alan Turing"
-//   },
-//   gracehop: {
-//     date_of_birth: "December 9, 1906",
-//     full_name: "Grace Hopper"
-//   }
-// });
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
